@@ -1,6 +1,6 @@
 import { cleanEnv, str, port } from 'envalid'
 
-function validateEnv(): void {
+const validateEnv = (): void => {
   cleanEnv(process.env, {
     NODE_ENV: str({
       choices: ['development', 'production'],
